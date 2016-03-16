@@ -1,0 +1,9 @@
+ul.h > li {
+    float: left;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
