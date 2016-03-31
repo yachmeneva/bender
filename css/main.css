@@ -1,9 +1,130 @@
-ul.h > li {
+body {
+    width: 100%;
+    min-width: 1300px;
+    font-family: Arial, sans-serif;
+
+}
+body > .wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    background: url(../i/header.jpg) no-repeat 0 0;
+}
+.page-header {
+    background-color: rgba(12, 154, 236, 0.88);
+}
+.page-header .logo {
     float: left;
 }
-.clearfix:after {
-    content: '';
-    display: table;
-    clear: both;
+    .page-header .logo a {
+        display: block;
+        width: 300px;
+        height: 55px;
+        background: url(../i/logo.png) no-repeat;
+        text-indent: -1000px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        line-height:55px;
+    }
+
+.page-header nav {
+    float: right;
 }
 
+nav ul.h > li, ul.h > li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.menu-level1 > li {
+    position: relative;
+}
+.menu-level1 > li > a {
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 55px;
+    color: white;
+}
+.menu-level1 > li a:hover, .menu-level1 > li.active a {
+    color: black;
+}
+.menu-level1 > li ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+}
+
+.menu-level1 li li a {
+    display: block;
+    width: 130px;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #1e2123;
+    color: white;
+}
+
+.menu-level1 li li:hover a {
+    color: #1e2123;
+    background: white;
+}
+
+section.slider {
+    position: relative;
+    background-color: rgba(12, 154, 236, 0.88);
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+.slider .inner {
+    width: 800px;
+    margin: 300px auto 0;
+    text-align: left;
+    color: white;
+}
+
+.slider h2 {
+    position: relative;
+    margin-left: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.slider h2::after {
+    content: '';
+    width: 60px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+.slider p {
+    line-height: 1.5;
+}
+.slider .slider-navigation {
+    position: absolute;
+    bottom: 50px;
+    left: 330px;
+    font-weight: bold;
+}
+.slider .slider-navigation li a {
+    display: block;
+    padding: 7px 10px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.slider .slider-navigation li a:hover {
+    border: 2px solid black;
+    color: black;
+}
+.slider .slider-navigation li.active a {
+    background-color: white;
+    color: #1292e3;
+}
