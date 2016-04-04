@@ -4,6 +4,12 @@ body {
     font-family: Arial, sans-serif;
 
 }
+ h3 {
+    font-size: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
 body > .wrapper {
     width: 1300px;
     margin: 0 auto;
@@ -72,38 +78,44 @@ nav ul.h > li, ul.h > li {
     background: white;
 }
 
-section.slider {
+main > section {
     position: relative;
-    background-color: rgba(12, 154, 236, 0.88);
     width: 100%;
+}
+section.slider {
     height: 700px;
+    background-color: rgba(12, 154, 236, 0.88);
+    color: white;
     overflow: hidden;
 }
-.slider .inner {
+section header {
     width: 800px;
-    margin: 300px auto 0;
+    margin: 180px auto 100px;
     text-align: left;
-    color: white;
 }
 
-.slider h2 {
+section header h2 {
     position: relative;
     margin-left: 80px;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 50px;
 }
-.slider h2::after {
+section header h2::after {
     content: '';
     width: 60px;
     height: 10px;
-    background: white;
+    background: black;
     position: absolute;
     bottom: -20px;
     left: 0;
 }
-.slider p {
+.slider h2::after {
+    background: white;
+}
+section p {
     line-height: 1.5;
+    margin-bottom: 25px;
 }
 .slider .slider-navigation {
     position: absolute;
@@ -127,4 +139,133 @@ section.slider {
 .slider .slider-navigation li.active a {
     background-color: white;
     color: #1292e3;
+}
+
+<!-- Welcome -->
+section .post {
+
+}
+.post:nth-child(2n) .picture {
+    float: left;
+    width: 50%;
+}
+.post:nth-child(2n) .text {
+    float: right;
+    width: 50%;
+}
+.post:nth-child(2n+1) .picture {
+    float: right;
+    width: 50%;
+}
+.post:nth-child(2n+1) .text {
+    float: left;
+    width: 50%;
+}
+.post .text {
+    padding: 100px 50px 20px;
+    box-sizing: border-box;
+}
+.post .text h3 {
+    font-size: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.post .picture {
+    position: relative;
+    width: 650px;
+    height: 330px;
+}
+.post .picture.w1 {
+    background: url('../d/w1.jpg') no-repeat;
+}
+.post .picture.w2 {
+    background: url('../d/w2.jpg') no-repeat;
+}
+.post .picture.w3 {
+    background: url('../d/w3.jpg') no-repeat;
+}
+.post .picture.w4 {
+    background: url('../d/w4.jpg') no-repeat;
+}
+.post .picture a.more {
+    position: absolute;
+    bottom: 50px;
+    display: block;
+    border: 3px solid white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+.post:nth-child(2n) .picture a.more {
+    left: 50px;
+}
+.post:nth-child(2n+1) .picture a.more {
+    right: 50px;
+}
+.post:hover {
+    background-color: rgba(12, 154, 236, 0.88);
+    color: white;
+}
+.post:hover .picture::before {
+    content: '';
+    width: 650px;
+    height: 330px;
+    background: rgba(12, 154, 236, 0.88);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.post:hover .picture a.more {
+    display: block;
+    z-index: 2;
+}
+
+.gallery nav {
+    width: 600px;
+    margin-bottom: 25px;
+}
+.gallery nav li > a, .gallery nav li > span {
+    display: block;
+    padding: 10px 10px;
+    color: rgba(12, 154, 236, 1);
+    border: 1px solid rgba(12, 154, 236, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.gallery nav li.selected > span {
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+.gallery nav li > a:hover {
+    background: rgba(12, 154, 236, 1);
+    color: white;
+}
+.gallery li {
+    position: relative;
+}
+.gallery li .hover {
+    position: absolute;
+    width: 650px;
+    height: 333px;
+    top: 0;
+    left: 0;
+    background: rgba(12, 154, 236, 0.88);
+    z-index: 2;
+    color: white;
+    display: none;
+    text-align: center;
+
+}
+.gallery li .hover h3 {
+    margin-top: 80px;
+}
+.gallery li:hover .hover {
+    display: block;
 }
