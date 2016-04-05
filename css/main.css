@@ -1,15 +1,34 @@
 body {
     width: 100%;
     min-width: 1300px;
-    font-family: Arial, sans-serif;
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: #1e2123;
 }
- h3 {
-    font-size: 19px;
-    font-weight: bold;
+h1, h2, h3 {
+    font-weight: 800;
+    color: #1e2123;
     text-transform: uppercase;
+}
+h2 {
+    font-size: 41px;
+    margin-bottom: 100px;
+}
+h3 {
+    font-size: 19px;
     margin-bottom: 25px;
 }
+p {
+    margin-bottom: 25px;
+}
+a.button, span.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 15px;
+    display: block;
+}
+
 body > .wrapper {
     width: 1300px;
     margin: 0 auto;
@@ -52,6 +71,8 @@ nav ul.h > li, ul.h > li {
     text-transform: uppercase;
     line-height: 55px;
     color: white;
+    font-size: 15px;
+    font-weight: 700;
 }
 .menu-level1 > li a:hover, .menu-level1 > li.active a {
     color: black;
@@ -71,6 +92,8 @@ nav ul.h > li, ul.h > li {
     text-transform: uppercase;
     background: #1e2123;
     color: white;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .menu-level1 li li:hover a {
@@ -97,9 +120,9 @@ section header {
 section header h2 {
     position: relative;
     margin-left: 80px;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 50px;
+}
+.slider h2 {
+    color: white;
 }
 section header h2::after {
     content: '';
@@ -107,7 +130,7 @@ section header h2::after {
     height: 10px;
     background: black;
     position: absolute;
-    bottom: -20px;
+    bottom: -40px;
     left: 0;
 }
 .slider h2::after {
@@ -121,12 +144,13 @@ section p {
     position: absolute;
     bottom: 50px;
     left: 330px;
-    font-weight: bold;
+    font-weight: 800;
+    font-size: 16px;
 }
 .slider .slider-navigation li a {
     display: block;
     padding: 7px 10px;
-    border: 2px solid white;
+    border: 3px solid white;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -161,13 +185,20 @@ section .post {
     float: left;
     width: 50%;
 }
+.post:nth-child(2n+1) .text h3, .post:nth-child(2n+1) .text .info {
+text-align: right;
+}
+.post .info {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
 .post .text {
-    padding: 100px 50px 20px;
+    padding: 65px 50px 20px;
     box-sizing: border-box;
 }
 .post .text h3 {
     font-size: 19px;
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 25px;
 }
@@ -191,12 +222,9 @@ section .post {
 .post .picture a.more {
     position: absolute;
     bottom: 50px;
-    display: block;
     border: 3px solid white;
-    padding: 10px 15px;
-    text-transform: uppercase;
+    padding: 7px 10px;
     color: white;
-    text-decoration: none;
     display: none;
 }
 .post:nth-child(2n) .picture a.more {
@@ -207,6 +235,9 @@ section .post {
 }
 .post:hover {
     background-color: rgba(12, 154, 236, 0.88);
+    color: white;
+}
+.post:hover h3 {
     color: white;
 }
 .post:hover .picture::before {
@@ -231,20 +262,18 @@ section .post {
 .gallery nav li > a, .gallery nav li > span {
     display: block;
     padding: 10px 10px;
-    color: rgba(12, 154, 236, 1);
-    border: 1px solid rgba(12, 154, 236, 1);
-    text-transform: uppercase;
-    text-decoration: none;
+    color: #1292e3;
+    border: 3px solid #1292e3;
     margin-right: 5px;
     margin-bottom: 10px;
 }
 .gallery nav li.selected > span {
     background: black;
     color: white;
-    border: 1px solid black;
+    border: 3px solid black;
 }
 .gallery nav li > a:hover {
-    background: rgba(12, 154, 236, 1);
+    background: #1292e3;
     color: white;
 }
 .gallery li {
@@ -264,8 +293,109 @@ section .post {
 
 }
 .gallery li .hover h3 {
+    color: white;
     margin-top: 80px;
 }
 .gallery li:hover .hover {
     display: block;
 }
+.gallery li .hover a {
+    display: block;
+    background: white;
+    color: #1292e3;
+    width: 100px;
+    padding: 10px 15px;
+    margin: 0 auto;
+}
+
+section article {
+    width: 800px;
+    margin: 0 auto;
+}
+article header {
+    float: right;
+    width: 360px;
+    margin: 0 0 25px;
+}
+article header h1 {
+    font-size: 33px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+article header h1 b {
+    font-weight: 800;
+}
+article img.previw {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+article .social a {
+    display: block;
+    padding: 10px 15px;
+    color: #1292e3;
+    border: 3px solid #1292e3;
+    margin-right: 10px;
+}
+
+.skills {
+    weight: 650px;
+}
+.skills p {
+    margin-bottom: 10px;
+}
+.skills .progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #eee;
+    margin-bottom: 25px;
+}
+
+.skills .progress-bar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    background: #1292e3;
+}
+.skills .progress-bar[data-done="80"]::before {
+    width: 80%;
+}
+.skills .progress-bar[data-done="66"]::before {
+    width: 66%;
+}
+.skills .progress-bar[data-done="92"]::before {
+    width: 92%;
+}
+.skills .progress-bar[data-done="38"]::before {
+    width: 38%;
+}
+
+.skills .progress-bar::after{
+    position: absolute;
+    width: auto;
+    padding: 5px;
+    background: black;
+    top: -20px;
+    color: white;
+    font-size: 11px;
+}
+.skills .progress-bar[data-done="80"]::after{
+    left: 80%;
+    content: '80%';
+}
+.skills .progress-bar[data-done="92"]::after{
+    left: 92%;
+    content: '92%';
+}
+.skills .progress-bar[data-done="66"]::after{
+    left: 66%;
+    content: '66%';
+}
+.skills .progress-bar[data-done="38"]::after{
+    left: 38%;
+    content: '38%';
+}
+
