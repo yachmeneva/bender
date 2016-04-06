@@ -13,7 +13,7 @@
         <div class="logo">
             <a href="#">PlanetExpress</a>
         </div>
-        <nav>
+        <nav class="header-menu">
             <ul class="menu-level1 h">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Service</a></li>
@@ -178,34 +178,33 @@
                 <h2>About me</h2>
                 <p>Vestibulum aliquam turpis quam, tincidunt semper lacus ultricies a. Pellentesque eu aliquet purus. Morbi eu erat in justo egestas euismod.</p>
             </header>
-            <article>
-                <img src="d/about.jpg" class="previw">
-                <header>
+            <article class="clearfix">
+                <img src="d/w1.jpg" class="previw">
+                <section>
                     <h1>Bender bending <b>Rodriguez</b></h1>
                     <ul class="social h">
                         <li><a href="#" class="button fb">Facebook</a></li>
                         <li><a href="#" class="button g">Google+</a></li>
                         <li><a href="#" class="button tw">Twitter</a></li>
                     </ul>
-                </header>
-                <section>
                     <p>Cras et diam venenatis, vulputate sapien vitae, iaculis nulla. Donec et metus efficitur, vestibulum purus non, sodales urna. Fusce id rhoncus nisi. In sagittis feugiat convallis. Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus ac, blandit finibus mi.</p>
-                    <p>Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl. Donec vel iaculis turpis, eu feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac nulla. Quisque</p>
+                    <p>Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl. Donec vel iaculis turpis, eu feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac nulla.</p>
                     <p>consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac pulvinar nulla velit eget elit. Vivamus maximus, leo nec vestibulum fringilla, lacus lectus mollis est, in imperdiet turpis lectus id mi. Morbi turpis eros, condimentum in magna vel, finibus varius velit. Donec pharetra magna in metus pretium, ac porttitor metus viverra. Etiam turpis nibh, euismod ac ligula at.</p>
+                    <aside class="skills">
+                        <h3>Skills</h3>
+                        <p>HTML/CSS</p>
+                        <div class="progress-bar" data-done="80"></div>
+                        <p>Responsive web design</p>
+                        <div class="progress-bar" data-done="66"></div>
+                        <p>Droid development</p>
+                        <div class="progress-bar" data-done="92"></div>
+                        <p>Cookies</p>
+                        <div class="progress-bar" data-done="38"></div>
+                    </aside>
                     <p>Donec et metus efficitur, vestibulum purus non, sodales urna. Fusce id rhoncus nisi. In sagittis feugiat convallis.</p>
                     <p>Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus ac, blandit finibus mi. Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl.</p>
+
                 </section>
-                <aside class="skills">
-                    <h3>Skills</h3>
-                    <p>HTML/CSS</p>
-                    <div class="progress-bar" data-done="80"></div>
-                    <p>Responsive web design</p>
-                    <div class="progress-bar" data-done="66"></div>
-                    <p>Droid development</p>
-                    <div class="progress-bar" data-done="92"></div>
-                    <p>Cookies</p>
-                    <div class="progress-bar" data-done="38"></div>
-                </aside>
             </article>
         </section>
 
@@ -244,45 +243,47 @@
                 <h2>Contact</h2>
                 <p>Turpis quam, tincidunt semper lacus ultricies a. Pellentesque eu aliquet purus. Morbi eu erat in justo egestas euismod.</p>
             </header>
-            <section>
+            <section class="contact clearfix">
                 <div class="map">
                     <img src="i/map.jpg">
                 </div>
                 <div class="info">
-                    <h3>Address</h3>
-                    <p>
-                        ul.Suvorova 12-45<br>
-                        31-970 Krakov<br>
-                        Russia
-                    </p>
-                    <p>
-                        Email: <a href="mailto:bender@gmail.com">bender@gmail.com</a><br>
-                        Phone: <span>+7 (898) 567-67-98</span> <br>
-                        Mobile: <span>+7 (898) 567-67-98</span><br>
-                        Facebook: <a href="fb.com">fb.com/bender</a><br>
-                        Twitter: <a href="tw.com">twitter.com/bender</a>
-                    </p>
-                    <form method="post" action="#">
-                        <fieldset>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name">
-                        </fieldset>
-                        <fieldset>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                        </fieldset>
-                        <fieldset>
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message"></textarea>
-                        </fieldset>
-                        <input type="submit" value="send">
-                    </form>
+                    <div class="inner">
+                        <h3>Address</h3>
+                        <p>
+                            ul.Suvorova 12-45<br>
+                            31-970 Krakov<br>
+                            Russia
+                        </p>
+                        <p>
+                            Email: <a href="mailto:bender@gmail.com">bender@gmail.com</a><br>
+                            Phone: <span>+7 (898) 567-67-98</span> <br>
+                            Mobile: <span>+7 (898) 567-67-98</span><br>
+                            Facebook: <a href="fb.com">fb.com/bender</a><br>
+                            Twitter: <a href="tw.com">twitter.com/bender</a>
+                        </p>
+                        <form method="post" action="#">
+                            <fieldset>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </fieldset>
+                            <fieldset>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </fieldset>
+                            <fieldset>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="7" required></textarea>
+                            </fieldset>
+                            <input type="submit" value="send" class="button">
+                        </form>
+                    </div>
                 </div>
             </section>
         </section>
     </main>
     <footer class="page-footer">
-        <nav>
+        <nav class="footer-menu">
             <ul class="h clearfix">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Service</a></li>
@@ -291,7 +292,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <p><span>© PlanetExpress</span>span> All rights reserved</p>
+        <p class="copyright">© 2015 <span>PlanetExpress</span> All rights reserved</p>
     </footer>
     </div>
 </body>
